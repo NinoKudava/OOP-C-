@@ -1,4 +1,5 @@
 
+
 #include "Date.h"
 
 Date::Date(int yy, int mm, int dd)
@@ -120,7 +121,7 @@ bool Date::is_valid(){
 
 ostream& operator<< (ostream& os,const Date& d){
 
-    return os << '(' << d.year() << ',' << d.month_name() <<',' << d.day() << ')';
+    return os << d.month_name() << " " << d.day() <<", " << d.year() << endl;
 }
 
 bool operator== (const Date& d, const Date& d2){
@@ -132,3 +133,8 @@ bool operator!=(const Date& d, const Date& d2){
     if (d.day()!=d2.day() || d.month()!=d2.month() || d.year()!=d2.year()) return true;
 return false;
 }
+
+
+
+
+
